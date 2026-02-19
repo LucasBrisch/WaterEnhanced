@@ -3,10 +3,8 @@ package net.lucasbz.waterenhanced.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 
-import net.minecraft.data.recipe.CookingRecipeJsonBuilder;
-import net.minecraft.data.recipe.RecipeExporter;
-import net.minecraft.data.recipe.RecipeGenerator;
-import net.minecraft.data.recipe.ShapedRecipeJsonBuilder;
+import net.lucasbz.waterenhanced.block.ModBlocks;
+import net.minecraft.data.recipe.*;
 
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -43,21 +41,50 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('B', Items.IRON_INGOT)
                         .criterion(hasItem(ModItems.CRYSTALLIZED_WATER),
                         conditionsFromItem(ModItems.CRYSTALLIZED_WATER))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "crystallized_water_ingot_from_crystallized_water_and_iron_ingot");
             }
 
             private void generateSmelting() {
 
                 CookingRecipeJsonBuilder.createSmelting(
-                                Ingredient.ofItems(ModItems.CRYSTALLIZED_WATER),
-                                RecipeCategory.MISC,
-                                Items.WIND_CHARGE,
-                                0.7f,
-                                200
+                            Ingredient.ofItems(ModItems.CRYSTALLIZED_WATER),
+                            RecipeCategory.MISC,
+                            Items.WIND_CHARGE,
+                            0.7f,
+                            200
                         )
                         .criterion(hasItem(ModItems.CRYSTALLIZED_WATER),
                                 conditionsFromItem(ModItems.CRYSTALLIZED_WATER))
-                        .offerTo(exporter);
+                        .offerTo(exporter, "smelting_crystallized_water_to_wind_charge");
+            }
+
+            private void generateStorageBlocks() {
+                ShapedRecipeJsonBuilder.create(
+                            this.registries.getOrThrow(RegistryKeys.ITEM),
+                            RecipeCategory.MISC,
+                            ModBlocks.CRYSTALLIZED_WATER_BLOCK,
+                            1
+                        )
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .input('A', ModItems.CRYSTALLIZED_WATER)
+                        .criterion(hasItem(ModItems.CRYSTALLIZED_WATER),
+                                conditionsFromItem(ModItems.CRYSTALLIZED_WATER))
+                        .offerTo(exporter, "crystallized_water_block_from_crystallized_water");
+            }
+
+            private void generateStorageBlocksReverse() {
+                ShapelessRecipeJsonBuilder.create(
+                            this.registries.getOrThrow(RegistryKeys.ITEM),
+                            RecipeCategory.MISC,
+                            ModItems.CRYSTALLIZED_WATER,
+                            9
+                        )
+                        .input(ModBlocks.CRYSTALLIZED_WATER_BLOCK)
+                        .criterion(hasItem(ModBlocks.CRYSTALLIZED_WATER_BLOCK),
+                                conditionsFromItem(ModBlocks.CRYSTALLIZED_WATER_BLOCK))
+                        .offerTo(exporter, "crystallized_water_from_block");
             }
 
 
@@ -65,6 +92,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             public void generate() {
                 generateIngots();
                 generateSmelting();
+                generateStorageBlocks();
+                generateStorageBlocksReverse();
             }
 
         };
