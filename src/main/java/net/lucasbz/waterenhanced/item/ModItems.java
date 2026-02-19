@@ -1,33 +1,48 @@
 package net.lucasbz.waterenhanced.item;
 
 import net.lucasbz.waterenhanced.WaterEnhanced;
+import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterPickaxeItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
+import java.util.function.Function;
+
 public class ModItems {
 
     public static Item CRYSTALLIZED_WATER;
     public static Item CRYSTALLIZED_WATER_INGOT;
+    public static Item CRYSTALLIZED_WATER_PICKAXE;
 
-    public static void registerModItems () {
+    public static void registerModItems() {
 
-        CRYSTALLIZED_WATER = registerItem("crystallized_water");
-        CRYSTALLIZED_WATER_INGOT = registerItem("crystallized_water_ingot");
+        ToolMaterial material = WaterToolMaterial.CRYSTALLIZED_WATER;
 
+        CRYSTALLIZED_WATER = registerItem("crystallized_water",
+                settings -> new Item(settings));
 
-        WaterEnhanced.LOGGER.info("Registering Mod Itens for" + WaterEnhanced.MOD_ID);
+        CRYSTALLIZED_WATER_INGOT = registerItem("crystallized_water_ingot",
+                settings -> new Item(settings));
+
+        CRYSTALLIZED_WATER_PICKAXE = registerItem("crystallized_water_pickaxe",
+                settings -> new CrystallizedWaterPickaxeItem(material, 1.0F, -2.8F, settings));
+
+        WaterEnhanced.LOGGER.info("Registering Mod Items for " + WaterEnhanced.MOD_ID);
     }
 
-    private static Item registerItem(String name) {
+    private static Item registerItem(String name, Function<Item.Settings, Item> factory) {
         Identifier id = Identifier.of(WaterEnhanced.MOD_ID, name);
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
-        Item item = Registry.register(Registries.ITEM, key, new Item(new Item.Settings().registryKey(key)));
-        return item;
+
+        Item.Settings settings = new Item.Settings().registryKey(key);
+        Item item = factory.apply(settings);
+
+        Item registered = Registry.register(Registries.ITEM, key, item);
+        WaterEnhanced.LOGGER.info("Registered item: " + id);
+        return registered;
     }
-
-
 }

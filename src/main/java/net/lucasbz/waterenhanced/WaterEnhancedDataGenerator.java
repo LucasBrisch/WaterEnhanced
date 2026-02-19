@@ -2,9 +2,14 @@ package net.lucasbz.waterenhanced;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.lucasbz.waterenhanced.block.ModBlocks;
 import net.lucasbz.waterenhanced.datagen.ModEnglishLangProvider;
+import net.lucasbz.waterenhanced.datagen.ModItemTagProvider;
 import net.lucasbz.waterenhanced.datagen.ModModelProvider;
 import net.lucasbz.waterenhanced.datagen.ModRecipeProvider;
+import net.lucasbz.waterenhanced.item.ModItemGroup;
+import net.lucasbz.waterenhanced.item.ModItems;
+import net.lucasbz.waterenhanced.item.WaterToolMaterial;
 
 public class WaterEnhancedDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -15,5 +20,6 @@ public class WaterEnhancedDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModEnglishLangProvider::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModItemTagProvider::new);
 	}
 }

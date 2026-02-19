@@ -87,6 +87,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, "crystallized_water_from_block");
             }
 
+            private void generateTools() {
+                    ShapedRecipeJsonBuilder.create(
+                                this.registries.getOrThrow(RegistryKeys.ITEM),
+                                RecipeCategory.TOOLS,
+                                ModItems.CRYSTALLIZED_WATER_PICKAXE,
+                                1
+                            )
+                            .pattern("AAA")
+                            .pattern(" B ")
+                            .pattern(" B ")
+                            .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
+                            .input('B', Items.STICK)
+                            .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
+                                    conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
+                            .offerTo(exporter, "crystallized_water_pickaxe_from_ingots_and_sticks");
+            }
+
 
             @Override
             public void generate() {
@@ -94,6 +111,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 generateSmelting();
                 generateStorageBlocks();
                 generateStorageBlocksReverse();
+                generateTools();
             }
 
         };

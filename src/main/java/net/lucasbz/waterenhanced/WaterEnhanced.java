@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.lucasbz.waterenhanced.block.ModBlocks;
 import net.lucasbz.waterenhanced.item.ModItemGroup;
 import net.lucasbz.waterenhanced.item.ModItems;
+import net.lucasbz.waterenhanced.item.WaterToolMaterial;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,8 +16,8 @@ public class WaterEnhanced implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 		ModItemGroup.registerItemGroups();
 	}
 }
