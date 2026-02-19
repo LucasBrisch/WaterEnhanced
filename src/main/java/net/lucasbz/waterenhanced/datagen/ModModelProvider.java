@@ -21,6 +21,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_INGOT, Models.GENERATED);
     }
 
     @Override

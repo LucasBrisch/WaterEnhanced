@@ -22,6 +22,7 @@ public class ModItemGroup {
 			.entries((displayContext, entries) -> {
 				entries.add(ModItems.CRYSTALLIZED_WATER);
 				entries.add(ModBlocks.CRYSTALLIZED_WATER_BLOCK);
+				entries.add(ModItems.CRYSTALLIZED_WATER_INGOT);
 			})
 			.build();
 

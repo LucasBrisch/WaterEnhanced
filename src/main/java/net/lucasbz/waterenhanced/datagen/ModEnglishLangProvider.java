@@ -16,5 +16,6 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("item.waterenhanced.crystallized_water", "Crystallized Water");
         translationBuilder.add("itemgroup.waterenhanced.water_enhanced_group", "Water Enhanced");
         translationBuilder.add("item.waterenhanced.crystallized_water_block", "Crystallized Water Block");
+        translationBuilder.add("item.waterenhanced.crystallized_water_ingot", "Crystallized Water Ingot");
     }
 }

@@ -11,10 +11,12 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
     public static Item CRYSTALLIZED_WATER;
+    public static Item CRYSTALLIZED_WATER_INGOT;
 
     public static void registerModItems () {
 
         CRYSTALLIZED_WATER = registerItem("crystallized_water");
+        CRYSTALLIZED_WATER_INGOT = registerItem("crystallized_water_ingot");
 
 
         WaterEnhanced.LOGGER.info("Registering Mod Itens for" + WaterEnhanced.MOD_ID);
