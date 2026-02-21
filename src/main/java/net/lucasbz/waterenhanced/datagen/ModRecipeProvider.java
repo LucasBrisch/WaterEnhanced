@@ -89,11 +89,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             private void generateTools() {
                     ShapedRecipeJsonBuilder.create(
-                                this.registries.getOrThrow(RegistryKeys.ITEM),
-                                RecipeCategory.TOOLS,
-                                ModItems.CRYSTALLIZED_WATER_PICKAXE,
-                                1
-                            )
+                            this.registries.getOrThrow(RegistryKeys.ITEM),
+                            RecipeCategory.TOOLS,
+                            ModItems.CRYSTALLIZED_WATER_PICKAXE,
+                            1
+                    )
                             .pattern("AAA")
                             .pattern(" B ")
                             .pattern(" B ")
@@ -102,6 +102,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                             .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
                                     conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
                             .offerTo(exporter, "crystallized_water_pickaxe_from_ingots_and_sticks");
+
+                    ShapedRecipeJsonBuilder.create(
+                            this.registries.getOrThrow(RegistryKeys.ITEM),
+                            RecipeCategory.TOOLS,
+                            ModItems.CRYSTALLIZED_WATER_AXE,
+                            1
+                    )
+                            .pattern(" AA")
+                            .pattern(" BA")
+                            .pattern(" B ")
+                            .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
+                            .input('B', Items.STICK)
+                            .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
+                                    conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
+                            .offerTo(exporter, "crystallized_water_axe_from_ingots_and_sticks");
             }
 
 

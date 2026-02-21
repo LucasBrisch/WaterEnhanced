@@ -1,6 +1,7 @@
 package net.lucasbz.waterenhanced.item;
 
 import net.lucasbz.waterenhanced.WaterEnhanced;
+import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterAxeItem;
 import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterPickaxeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
@@ -17,6 +18,7 @@ public class ModItems {
     public static Item CRYSTALLIZED_WATER;
     public static Item CRYSTALLIZED_WATER_INGOT;
     public static Item CRYSTALLIZED_WATER_PICKAXE;
+    public static Item CRYSTALLIZED_WATER_AXE;
 
     public static void registerModItems() {
 
@@ -30,6 +32,9 @@ public class ModItems {
 
         CRYSTALLIZED_WATER_PICKAXE = registerItem("crystallized_water_pickaxe",
                 settings -> new CrystallizedWaterPickaxeItem(material, 1.0F, -2.8F, settings));
+
+        CRYSTALLIZED_WATER_AXE = registerItem("crystallized_water_axe",
+                settings -> new CrystallizedWaterAxeItem(material, 5.0F, -3.0F, settings));
 
         WaterEnhanced.LOGGER.info("Registering Mod Items for " + WaterEnhanced.MOD_ID);
     }

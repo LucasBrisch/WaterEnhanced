@@ -24,6 +24,7 @@ public class ModItemGroup {
 				entries.add(ModBlocks.CRYSTALLIZED_WATER_BLOCK);
 				entries.add(ModItems.CRYSTALLIZED_WATER_INGOT);
 				entries.add(ModItems.CRYSTALLIZED_WATER_PICKAXE);
+				entries.add(ModItems.CRYSTALLIZED_WATER_AXE);
 			})
 			.build();
 
