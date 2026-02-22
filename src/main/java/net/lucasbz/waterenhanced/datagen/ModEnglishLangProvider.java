@@ -21,6 +21,9 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("item.waterenhanced.crystallized_water_axe", "Crystallized Water Axe");
         translationBuilder.add("item.waterenhanced.crystallized_water_shovel", "Crystallized Water Shovel");
         translationBuilder.add("item.waterenhanced.crystallized_water_sword", "Crystallized Water Sword");
+        translationBuilder.add("item.waterenhanced.crystallized_water_ore", "Crystallized Water Ore");
+
+
         translationBuilder.add("tooltip.waterenhanced.charges", "Charges: %s/%s");
     }
 }

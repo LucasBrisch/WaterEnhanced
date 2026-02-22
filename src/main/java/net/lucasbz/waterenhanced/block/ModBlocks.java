@@ -19,6 +19,7 @@ import java.util.function.Function;
 public class ModBlocks {
 
     public static Block CRYSTALLIZED_WATER_BLOCK;
+    public static Block CRYSTALLIZED_WATER_ORE;
 
     public static void registerModBlocks() {
         CRYSTALLIZED_WATER_BLOCK = register(
@@ -28,6 +29,16 @@ public class ModBlocks {
                         .strength(5.0F, 6.0F)
                         .requiresTool()
                         .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+        );
+
+        CRYSTALLIZED_WATER_ORE = register(
+            "crystallized_water_ore",
+            Block::new,
+                AbstractBlock.Settings.create()
+                        .strength(5.0F, 6.0F)
+                        .requiresTool()
+                        .sounds(BlockSoundGroup.STONE),
             true
         );
     }

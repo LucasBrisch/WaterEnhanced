@@ -19,9 +19,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.CRYSTALLIZED_WATER_BLOCK);
+                .add(ModBlocks.CRYSTALLIZED_WATER_BLOCK)
+                .add(ModBlocks.CRYSTALLIZED_WATER_ORE);
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.CRYSTALLIZED_WATER_BLOCK);
+
+        valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.CRYSTALLIZED_WATER_ORE);
     }
 }
