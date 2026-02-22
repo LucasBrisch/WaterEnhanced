@@ -20,12 +20,17 @@ public class ModItemGroup {
 			.displayName(Text.translatable("itemgroup.waterenhanced.water_enhanced_group"))
 			.icon(() -> new ItemStack(ModItems.CRYSTALLIZED_WATER))
 			.entries((displayContext, entries) -> {
-				entries.add(ModItems.CRYSTALLIZED_WATER);
 				entries.add(ModBlocks.CRYSTALLIZED_WATER_BLOCK);
+				entries.add(ModBlocks.CRYSTALLIZED_WATER_ORE);
+				entries.add(ModItems.CRYSTALLIZED_WATER);
 				entries.add(ModItems.CRYSTALLIZED_WATER_INGOT);
 				entries.add(ModItems.CRYSTALLIZED_WATER_PICKAXE);
 				entries.add(ModItems.CRYSTALLIZED_WATER_AXE);
-				entries.add(ModBlocks.CRYSTALLIZED_WATER_ORE);
+				entries.add(ModItems.CRYSTALLIZED_WATER_SHOVEL);
+				entries.add(ModItems.CRYSTALLIZED_WATER_HELMET);
+				entries.add(ModItems.CRYSTALLIZED_WATER_CHESTPLATE);
+				entries.add(ModItems.CRYSTALLIZED_WATER_LEGGINGS);
+				entries.add(ModItems.CRYSTALLIZED_WATER_BOOTS);
 
 			})
 			.build();

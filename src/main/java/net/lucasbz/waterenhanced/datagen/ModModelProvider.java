@@ -23,10 +23,16 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_INGOT, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_SWORD, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_HELMET, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_CHESTPLATE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_LEGGINGS, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_BOOTS, Models.HANDHELD);
     }
 
     @Override

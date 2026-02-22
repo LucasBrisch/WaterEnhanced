@@ -87,66 +87,126 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, "crystallized_water_from_block");
             }
 
+            private void generateArmor() {
+                ShapedRecipeJsonBuilder.create(
+                        this.registries.getOrThrow(RegistryKeys.ITEM),
+                        RecipeCategory.COMBAT,
+                        ModItems.CRYSTALLIZED_WATER_HELMET,
+                        1
+                )
+                        .pattern("AAA")
+                        .pattern("A A")
+                        .pattern("   ")
+                        .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
+                        .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
+                                conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
+                        .offerTo(exporter, "crystallized_water_helmet_from_ingots");
+
+                ShapedRecipeJsonBuilder.create(
+                        this.registries.getOrThrow(RegistryKeys.ITEM),
+                        RecipeCategory.COMBAT,
+                        ModItems.CRYSTALLIZED_WATER_CHESTPLATE,
+                        1
+                )
+                        .pattern("A A")
+                        .pattern("AAA")
+                        .pattern("AAA")
+                        .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
+                        .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
+                                conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
+                        .offerTo(exporter, "crystallized_water_chestplate_from_ingots");
+
+                ShapedRecipeJsonBuilder.create(
+                        this.registries.getOrThrow(RegistryKeys.ITEM),
+                        RecipeCategory.COMBAT,
+                        ModItems.CRYSTALLIZED_WATER_LEGGINGS,
+                        1
+                )
+                        .pattern("AAA")
+                        .pattern("A A")
+                        .pattern("A A")
+                        .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
+                        .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
+                                conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
+                        .offerTo(exporter, "crystallized_water_leggings_from_ingots");
+
+                ShapedRecipeJsonBuilder.create(
+                        this.registries.getOrThrow(RegistryKeys.ITEM),
+                        RecipeCategory.COMBAT,
+                        ModItems.CRYSTALLIZED_WATER_BOOTS,
+                        1
+                )
+                        .pattern("   ")
+                        .pattern("A A")
+                        .pattern("A A")
+                        .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
+                        .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
+                                conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
+                        .offerTo(exporter, "crystallized_water_boots_from_ingots"
+
+                );
+            }
+
             private void generateTools() {
-                    ShapedRecipeJsonBuilder.create(
-                            this.registries.getOrThrow(RegistryKeys.ITEM),
-                            RecipeCategory.TOOLS,
-                            ModItems.CRYSTALLIZED_WATER_PICKAXE,
-                            1
-                    )
-                            .pattern("AAA")
-                            .pattern(" B ")
-                            .pattern(" B ")
-                            .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
-                            .input('B', Items.STICK)
-                            .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
-                                    conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
-                            .offerTo(exporter, "crystallized_water_pickaxe_from_ingots_and_sticks");
+                ShapedRecipeJsonBuilder.create(
+                        this.registries.getOrThrow(RegistryKeys.ITEM),
+                        RecipeCategory.TOOLS,
+                        ModItems.CRYSTALLIZED_WATER_PICKAXE,
+                        1
+                )
+                        .pattern("AAA")
+                        .pattern(" B ")
+                        .pattern(" B ")
+                        .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
+                        .input('B', Items.STICK)
+                        .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
+                                conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
+                        .offerTo(exporter, "crystallized_water_pickaxe_from_ingots_and_sticks");
 
-                    ShapedRecipeJsonBuilder.create(
-                            this.registries.getOrThrow(RegistryKeys.ITEM),
-                            RecipeCategory.TOOLS,
-                            ModItems.CRYSTALLIZED_WATER_AXE,
-                            1
-                    )
-                            .pattern(" AA")
-                            .pattern(" BA")
-                            .pattern(" B ")
-                            .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
-                            .input('B', Items.STICK)
-                            .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
-                                    conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
-                            .offerTo(exporter, "crystallized_water_axe_from_ingots_and_sticks");
+                ShapedRecipeJsonBuilder.create(
+                        this.registries.getOrThrow(RegistryKeys.ITEM),
+                        RecipeCategory.TOOLS,
+                        ModItems.CRYSTALLIZED_WATER_AXE,
+                        1
+                )
+                        .pattern(" AA")
+                        .pattern(" BA")
+                        .pattern(" B ")
+                        .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
+                        .input('B', Items.STICK)
+                        .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
+                                conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
+                        .offerTo(exporter, "crystallized_water_axe_from_ingots_and_sticks");
 
-                    ShapedRecipeJsonBuilder.create(
-                            this.registries.getOrThrow(RegistryKeys.ITEM),
-                            RecipeCategory.TOOLS,
-                            ModItems.CRYSTALLIZED_WATER_SHOVEL,
-                            1
-                    )
-                            .pattern(" A ")
-                            .pattern(" B ")
-                            .pattern(" B ")
-                            .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
-                            .input('B', Items.STICK)
-                            .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
-                                    conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
-                            .offerTo(exporter, "crystallized_water_shovel_from_ingots_and_sticks");
+                ShapedRecipeJsonBuilder.create(
+                        this.registries.getOrThrow(RegistryKeys.ITEM),
+                        RecipeCategory.TOOLS,
+                        ModItems.CRYSTALLIZED_WATER_SHOVEL,
+                        1
+                )
+                        .pattern(" A ")
+                        .pattern(" B ")
+                        .pattern(" B ")
+                        .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
+                        .input('B', Items.STICK)
+                        .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
+                                conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
+                        .offerTo(exporter, "crystallized_water_shovel_from_ingots_and_sticks");
 
-                    ShapedRecipeJsonBuilder.create(
-                            this.registries.getOrThrow(RegistryKeys.ITEM),
-                            RecipeCategory.COMBAT,
-                            ModItems.CRYSTALLIZED_WATER_SWORD,
-                            1
-                    )
-                            .pattern(" A ")
-                            .pattern(" A ")
-                            .pattern(" B ")
-                            .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
-                            .input('B', Items.STICK)
-                            .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
-                                    conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
-                            .offerTo(exporter, "crystallized_water_sword_from_ingots_and_sticks");
+                ShapedRecipeJsonBuilder.create(
+                        this.registries.getOrThrow(RegistryKeys.ITEM),
+                        RecipeCategory.COMBAT,
+                        ModItems.CRYSTALLIZED_WATER_SWORD,
+                        1
+                )
+                        .pattern(" A ")
+                        .pattern(" A ")
+                        .pattern(" B ")
+                        .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
+                        .input('B', Items.STICK)
+                        .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
+                                conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
+                        .offerTo(exporter, "crystallized_water_sword_from_ingots_and_sticks");
 
             }
 
@@ -158,6 +218,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 generateStorageBlocks();
                 generateStorageBlocksReverse();
                 generateTools();
+                generateArmor();
             }
 
         };

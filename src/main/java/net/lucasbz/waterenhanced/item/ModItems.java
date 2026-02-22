@@ -1,12 +1,10 @@
 package net.lucasbz.waterenhanced.item;
 
 import net.lucasbz.waterenhanced.WaterEnhanced;
-import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterAxeItem;
-import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterPickaxeItem;
-import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterShovelItem;
-import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterSwordItem;
+import net.lucasbz.waterenhanced.item.custom.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -23,6 +21,10 @@ public class ModItems {
     public static Item CRYSTALLIZED_WATER_AXE;
     public static Item CRYSTALLIZED_WATER_SHOVEL;
     public static Item CRYSTALLIZED_WATER_SWORD;
+    public static Item CRYSTALLIZED_WATER_HELMET;
+    public static Item CRYSTALLIZED_WATER_CHESTPLATE;
+    public static Item CRYSTALLIZED_WATER_LEGGINGS;
+    public static Item CRYSTALLIZED_WATER_BOOTS;
 
     public static void registerModItems() {
 
@@ -45,6 +47,15 @@ public class ModItems {
 
         CRYSTALLIZED_WATER_SWORD = registerItem("crystallized_water_sword",
                 settings -> new CrystallizedWaterSwordItem(crystallizedToolsMaterial, 3.5F, -2.4F, settings));
+
+        CRYSTALLIZED_WATER_HELMET = registerItem("crystallized_water_helmet",
+                settings -> new CrystallizedWaterArmorItem(EquipmentType.HELMET, settings));
+        CRYSTALLIZED_WATER_CHESTPLATE = registerItem("crystallized_water_chestplate",
+                settings -> new CrystallizedWaterArmorItem(EquipmentType.CHESTPLATE, settings));
+        CRYSTALLIZED_WATER_LEGGINGS = registerItem("crystallized_water_leggings",
+                settings -> new CrystallizedWaterArmorItem(EquipmentType.LEGGINGS, settings));
+        CRYSTALLIZED_WATER_BOOTS = registerItem("crystallized_water_boots",
+                settings -> new CrystallizedWaterArmorItem(EquipmentType.BOOTS, settings));
 
         WaterEnhanced.LOGGER.info("Registering Mod Items for " + WaterEnhanced.MOD_ID);
     }

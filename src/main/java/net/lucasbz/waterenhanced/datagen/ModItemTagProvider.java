@@ -21,14 +21,21 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
             TagKey.of(RegistryKeys.ITEM,
                     Identifier.of(WaterEnhanced.MOD_ID, "water_tool_materials"));
 
+    public static final TagKey<Item> REPAIRS_CRYSTALLIZED_WATER_ARMOR =
+            TagKey.of(RegistryKeys.ITEM,
+                    Identifier.of(WaterEnhanced.MOD_ID, "repairs_crystallized_water_armor"));
+
     public ModItemTagProvider(FabricDataOutput output,
                               CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 
-
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        valueLookupBuilder(WATER_TOOL_MATERIALS)
+                .add(ModItems.CRYSTALLIZED_WATER_INGOT);
 
+        valueLookupBuilder(REPAIRS_CRYSTALLIZED_WATER_ARMOR)
+                .add(ModItems.CRYSTALLIZED_WATER_INGOT);
     }
 }
