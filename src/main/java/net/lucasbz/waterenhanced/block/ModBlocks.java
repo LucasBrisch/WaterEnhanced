@@ -1,6 +1,7 @@
 package net.lucasbz.waterenhanced.block;
 
 import net.lucasbz.waterenhanced.WaterEnhanced;
+import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterPickaxeItem;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -9,6 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
@@ -22,7 +24,10 @@ public class ModBlocks {
         CRYSTALLIZED_WATER_BLOCK = register(
             "crystallized_water_block",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.AMETHYST_BLOCK),
+                AbstractBlock.Settings.create()
+                        .strength(5.0F, 6.0F)
+                        .requiresTool()
+                        .sounds(BlockSoundGroup.AMETHYST_BLOCK),
             true
         );
     }
