@@ -25,6 +25,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_SWORD, Models.HANDHELD);
     }
 
     @Override

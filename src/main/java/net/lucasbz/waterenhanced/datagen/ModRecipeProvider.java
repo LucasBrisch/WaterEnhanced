@@ -132,6 +132,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                             .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
                                     conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
                             .offerTo(exporter, "crystallized_water_shovel_from_ingots_and_sticks");
+
+                    ShapedRecipeJsonBuilder.create(
+                            this.registries.getOrThrow(RegistryKeys.ITEM),
+                            RecipeCategory.COMBAT,
+                            ModItems.CRYSTALLIZED_WATER_SWORD,
+                            1
+                    )
+                            .pattern(" A ")
+                            .pattern(" A ")
+                            .pattern(" B ")
+                            .input('A', ModItems.CRYSTALLIZED_WATER_INGOT)
+                            .input('B', Items.STICK)
+                            .criterion(hasItem(ModItems.CRYSTALLIZED_WATER_INGOT),
+                                    conditionsFromItem(ModItems.CRYSTALLIZED_WATER_INGOT))
+                            .offerTo(exporter, "crystallized_water_sword_from_ingots_and_sticks");
+
             }
 
 

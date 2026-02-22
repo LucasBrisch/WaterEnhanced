@@ -4,6 +4,7 @@ import net.lucasbz.waterenhanced.WaterEnhanced;
 import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterAxeItem;
 import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterPickaxeItem;
 import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterShovelItem;
+import net.lucasbz.waterenhanced.item.custom.CrystallizedWaterSwordItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
@@ -21,6 +22,7 @@ public class ModItems {
     public static Item CRYSTALLIZED_WATER_PICKAXE;
     public static Item CRYSTALLIZED_WATER_AXE;
     public static Item CRYSTALLIZED_WATER_SHOVEL;
+    public static Item CRYSTALLIZED_WATER_SWORD;
 
     public static void registerModItems() {
 
@@ -40,6 +42,9 @@ public class ModItems {
 
         CRYSTALLIZED_WATER_SHOVEL = registerItem("crystallized_water_shovel",
                 settings -> new CrystallizedWaterShovelItem(crystallizedToolsMaterial, 1.5F, -3.0F, settings));
+
+        CRYSTALLIZED_WATER_SWORD = registerItem("crystallized_water_sword",
+                settings -> new CrystallizedWaterSwordItem(crystallizedToolsMaterial, 3.5F, -2.4F, settings));
 
         WaterEnhanced.LOGGER.info("Registering Mod Items for " + WaterEnhanced.MOD_ID);
     }
