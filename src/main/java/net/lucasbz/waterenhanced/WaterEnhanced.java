@@ -6,6 +6,7 @@ import net.lucasbz.waterenhanced.block.ModBlocks;
 import net.lucasbz.waterenhanced.item.ModItemGroup;
 import net.lucasbz.waterenhanced.item.ModItems;
 import net.lucasbz.waterenhanced.item.WaterToolMaterial;
+import net.lucasbz.waterenhanced.worldgen.ModWorldGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,5 +20,6 @@ public class WaterEnhanced implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroup.registerItemGroups();
+		ModWorldGen.bootstrap();
 	}
 }
