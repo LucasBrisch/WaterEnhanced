@@ -19,5 +19,6 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("item.waterenhanced.crystallized_water_ingot", "Crystallized Water Ingot");
         translationBuilder.add("item.waterenhanced.crystallized_water_pickaxe", "Crystallized Water Pickaxe");
         translationBuilder.add("item.waterenhanced.crystallized_water_axe", "Crystallized Water Axe");
+        translationBuilder.add("item.waterenhanced.crystallized_water_shovel", "Crystallized Water Shovel");
     }
 }
