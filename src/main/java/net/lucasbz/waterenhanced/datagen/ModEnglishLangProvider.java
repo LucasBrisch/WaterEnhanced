@@ -25,5 +25,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
 
 
         translationBuilder.add("tooltip.waterenhanced.charges", "Charges: %s/%s");
+
+        translationBuilder.add("entity.waterenhanced.crystal_fish", "Crystal Fish");
     }
 }
