@@ -3,6 +3,7 @@ package net.lucasbz.waterenhanced;
 import net.fabricmc.api.ModInitializer;
 
 import net.lucasbz.waterenhanced.block.ModBlocks;
+import net.lucasbz.waterenhanced.entity.ModEntities;
 import net.lucasbz.waterenhanced.item.ModItemGroup;
 import net.lucasbz.waterenhanced.item.ModItems;
 import net.lucasbz.waterenhanced.item.WaterToolMaterial;
@@ -19,6 +20,7 @@ public class WaterEnhanced implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModEntities.register();
 		ModItemGroup.registerItemGroups();
 		ModWorldGen.bootstrap();
 	}

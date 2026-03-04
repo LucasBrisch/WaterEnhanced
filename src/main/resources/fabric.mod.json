@@ -18,6 +18,9 @@
 		"main": [
 			"net.lucasbz.waterenhanced.WaterEnhanced"
 		],
+		"client": [
+			"net.lucasbz.waterenhanced.WaterEnhancedClient"
+		],
 		"fabric-datagen": [
 			"net.lucasbz.waterenhanced.WaterEnhancedDataGenerator"
 		]
