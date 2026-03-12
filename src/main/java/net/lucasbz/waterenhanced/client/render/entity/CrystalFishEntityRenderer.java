@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 @Environment(EnvType.CLIENT)
 public class CrystalFishEntityRenderer extends CodEntityRenderer {
 
-    private static final Identifier TEXTURE = Identifier.of(WaterEnhanced.MOD_ID, "textures/entity/fish/crystal_fish");
+    private static final Identifier TEXTURE = Identifier.of(WaterEnhanced.MOD_ID, "textures/entity/fish/crystal_fish.png");
 
     public CrystalFishEntityRenderer(EntityRendererFactory.Context ctx) {
         super(ctx);
