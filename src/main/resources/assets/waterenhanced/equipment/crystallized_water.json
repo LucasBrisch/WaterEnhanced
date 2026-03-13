@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "waterenhanced:crystallized_water"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "waterenhanced:crystallized_water"
+      }
+    ]
+  }
+}
