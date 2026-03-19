@@ -25,6 +25,7 @@ public class ModItems {
     public static Item CRYSTALLIZED_WATER_CHESTPLATE;
     public static Item CRYSTALLIZED_WATER_LEGGINGS;
     public static Item CRYSTALLIZED_WATER_BOOTS;
+    public static Item ABYSS_CORE;
 
     public static void registerModItems() {
 
@@ -56,6 +57,9 @@ public class ModItems {
                 settings -> new CrystallizedWaterArmorItem(EquipmentType.LEGGINGS, settings));
         CRYSTALLIZED_WATER_BOOTS = registerItem("crystallized_water_boots",
                 settings -> new CrystallizedWaterArmorItem(EquipmentType.BOOTS, settings));
+
+        ABYSS_CORE = registerItem("abyss_core",
+                settings -> new Item(settings));
 
         WaterEnhanced.LOGGER.info("Registering Mod Items for " + WaterEnhanced.MOD_ID);
     }

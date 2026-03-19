@@ -33,6 +33,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_CHESTPLATE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_LEGGINGS, Models.HANDHELD);
         itemModelGenerator.register(ModItems.CRYSTALLIZED_WATER_BOOTS, Models.HANDHELD);
+
+        // Dropped boss material (used as a rare Abyss Guardian reward).
+        itemModelGenerator.register(ModItems.ABYSS_CORE, Models.GENERATED);
     }
 
     @Override

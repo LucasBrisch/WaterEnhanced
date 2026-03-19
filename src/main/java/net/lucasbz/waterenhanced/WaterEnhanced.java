@@ -3,6 +3,7 @@ package net.lucasbz.waterenhanced;
 import net.fabricmc.api.ModInitializer;
 
 import net.lucasbz.waterenhanced.block.ModBlocks;
+import net.lucasbz.waterenhanced.entity.AbyssGuardianSpawnHandler;
 import net.lucasbz.waterenhanced.entity.ModEntities;
 import net.lucasbz.waterenhanced.item.ModItemGroup;
 import net.lucasbz.waterenhanced.item.ModItems;
@@ -21,6 +22,7 @@ public class WaterEnhanced implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModEntities.register();
+		AbyssGuardianSpawnHandler.register();
 		ModItemGroup.registerItemGroups();
 		ModWorldGen.bootstrap();
 	}
