@@ -31,6 +31,7 @@ public class ModItemGroup {
 				entries.add(ModItems.CRYSTALLIZED_WATER_CHESTPLATE);
 				entries.add(ModItems.CRYSTALLIZED_WATER_LEGGINGS);
 				entries.add(ModItems.CRYSTALLIZED_WATER_BOOTS);
+				entries.add(ModItems.ABYSS_CORE);
 
 			})
 			.build();
