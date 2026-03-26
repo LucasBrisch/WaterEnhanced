@@ -27,6 +27,7 @@ public class ModItemGroup {
 				entries.add(ModItems.CRYSTALLIZED_WATER_PICKAXE);
 				entries.add(ModItems.CRYSTALLIZED_WATER_AXE);
 				entries.add(ModItems.CRYSTALLIZED_WATER_SHOVEL);
+				entries.add(ModItems.CRYSTALLIZED_WATER_SWORD);
 				entries.add(ModItems.CRYSTALLIZED_WATER_HELMET);
 				entries.add(ModItems.CRYSTALLIZED_WATER_CHESTPLATE);
 				entries.add(ModItems.CRYSTALLIZED_WATER_LEGGINGS);
