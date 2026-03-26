@@ -20,5 +20,6 @@ public class WaterEnhancedDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModItemTagProvider::new);
 		pack.addProvider(ModBlockTagProvider::new);
 		pack.addProvider(ModBlockLootTableProvider::new);
+		pack.addProvider(ModBrazilianPortugueseLangProvider::new);
 	}
 }
